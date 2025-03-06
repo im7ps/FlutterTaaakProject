@@ -13,7 +13,6 @@ class AppRouter {
   static const String bluetooth = '/bluetooth';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    debugPrint(settings.name);
     switch(settings.name)
     {
       case home:

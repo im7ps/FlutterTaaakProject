@@ -24,7 +24,7 @@ class TaaakApp extends StatelessWidget {
 
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => MqttProvider()),
+        ChangeNotifierProvider(create: (_) => MqttService()),
         ChangeNotifierProvider(create: (_) => BluetoothProvider()),
       ],
       child: MaterialApp(
