@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
       {'text': 'Bluetooth', 'route': '/bluetooth'},
     ];
 
-    return Consumer2<MqttService, BluetoothProvider> (
+    return Consumer2<MqttService, BluetoothService> (
       builder: (context, mqttService, bluetoothProvider, _) {
         return Center(
           child: Column(
