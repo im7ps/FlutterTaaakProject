@@ -10,7 +10,11 @@ class PublishPageMQTT extends StatelessWidget {
 
   void _publishTextOnTopic(MqttService mqttService, String topic, String text) async {
     debugPrint('Chiamata a _publishTextOnTopic');
-    await mqttService.connect();
+    bool isConnected = await mqttService.connect();
+    if (isConnected)
+    {
+      mqttService.publish(topic, text);
+    }
   }
 
   @override
